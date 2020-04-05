@@ -1,8 +1,8 @@
 {
   "name": "react-context-storage",
   "version": "1.0.0",
-  "description": "HOC's for React Context Storage",
-  "main": "src/sample-app/index.ts",
+  "description": "HOCs for React Context Storage",
+  "main": "dist/build.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --mode=\"development\"",
     "build": "webpack --mode=\"production\"",
@@ -62,12 +62,12 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "react-dom": "^16.13.1",
+    "react": "^16.13.1"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.8.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+  "peerDependencies": {
+    "react": "^16.13.1"
   },
   "lint-staged": {
     "*.{js,css,json,md}": [
@@ -87,8 +87,5 @@
     "url": "https://github.com/aleksandr-novikov/react-context-storage/issues"
   },
   "homepage": "https://github.com/aleksandr-novikov/react-context-storage#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "license": "MIT"
 }
