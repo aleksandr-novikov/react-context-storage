@@ -1,6 +1,6 @@
 {
   "name": "react-context-storage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "HOCs for React Context Storage",
   "main": "dist/build.js",
   "module": "dist/build.js",
