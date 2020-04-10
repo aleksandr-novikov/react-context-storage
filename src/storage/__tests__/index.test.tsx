@@ -2,6 +2,16 @@ import React from 'react';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { withStorage, withStorageProvider } from '../index';
+import { Action } from '../types';
+
+interface Counter {
+  counter: number;
+}
+
+interface ContextStorage {
+  storage: Counter;
+  dispatch: (action: Action) => void;
+}
 
 configure({ adapter: new Adapter() });
 
@@ -11,7 +21,7 @@ const incrementValue = 5;
 const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
 const storageName = 'counter-storage';
 
-const counterReducer = (state, action) => {
+const counterReducer = (state: Counter, action: Action): Counter => {
   switch (action.type) {
     case INCREMENT_COUNTER:
       return { ...state, counter: state.counter + action.value };
@@ -24,8 +34,10 @@ const Consumer = ({
     storage: { counter },
     dispatch,
   },
-}) => {
-  const onClick = () =>
+}: {
+  context: ContextStorage;
+}): JSX.Element => {
+  const onClick = (): void =>
     dispatch({ type: INCREMENT_COUNTER, value: incrementValue });
   return (
     <>
@@ -38,7 +50,7 @@ const Consumer = ({
 };
 const ConsumerWithStorage = withStorage(storageName)(Consumer);
 
-const Component = () => <ConsumerWithStorage />;
+const Component = (): JSX.Element => <ConsumerWithStorage />;
 const ComponentWithStorageProvider = withStorageProvider({
   storageName,
   defaultValues: {
