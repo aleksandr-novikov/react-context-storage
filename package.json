@@ -1,6 +1,6 @@
 {
   "name": "react-context-storage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "HOCs for React Context Storage",
   "main": "dist/build.js",
   "module": "dist/build.js",
@@ -76,5 +76,6 @@
   "license": "MIT",
   "dependencies": {
     "rollup-plugin-babel": "^4.4.0"
-  }
+  },
+  "keywords": ["react", "storage", "store", "context", "state", "redux"]
 }

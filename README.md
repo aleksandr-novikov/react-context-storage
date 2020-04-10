@@ -1,6 +1,6 @@
 # react-context-storage
 
-This is a very lightweight(~6kb) alternative to Redux store based on React Context API. Support multiple storages, reducers, saving to LocalStorage and SessionStorage.
+This is a very lightweight(~8kb) alternative to Redux store based on React Context API. Support multiple storages, reducers, saving to LocalStorage and SessionStorage.
 
 
 ## Installation
@@ -13,7 +13,7 @@ React v^16.9.0
 
 ## API
 
-###withStorageProvider
+### withStorageProvider
 ```typescript
 withStorageProvider(
 {
@@ -28,7 +28,7 @@ withStorageProvider(
 )
 ```
 
-###withStorage
+### withStorage
 
 ```typescript
 withStorage(
@@ -42,7 +42,7 @@ withStorage(
 
 Please check out **src/sample-app** for a live demo.
 
-```jsx
+```tsx
 import React from 'react';
 import { withStorageProvider, withStorage } from 'react-context-storage';
 import { INCREMENT_COUNTER } from './actions';
@@ -57,8 +57,8 @@ const useLocal = false;
 
 /* 
 Consumer component that will have a "context" prop which contains 2 properties:
-	storage - your storage object
-	dispatch - function that dispatches an action which gets passed into your reducer
+  storage - your storage object
+  dispatch - function that dispatches an action which gets passed into your reducer
 */
 const Consumer = ({
   context: {
@@ -93,7 +93,7 @@ const App = () => (
 );
 
 /* 
-Wrapes parent component with Storage Provider allowing using Storage in children components.
+Wraps parent component with Storage Provider allowing using Storage in children components.
 Pass in your reducer to handle actions dispatched in Consumer components
 */
 export const AppWithStorageProvider = withStorageProvider({
@@ -103,7 +103,6 @@ export const AppWithStorageProvider = withStorageProvider({
   useSession,
   useLocal,
 })(App);
-
 ```
 
 ## License
