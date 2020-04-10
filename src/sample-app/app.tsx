@@ -1,4 +1,3 @@
-import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import { withStorageProvider, withStorage } from '../storage';
 import { INCREMENT_COUNTER } from './actions';
@@ -41,12 +40,10 @@ const App = (): JSX.Element => (
   </>
 );
 
-const AppWithStorageProvider = withStorageProvider({
+export const AppWithStorageProvider = withStorageProvider({
   storageName,
   defaultValues,
   reducer: counterReducer,
   useSession,
   useLocal,
 })(App);
-
-export const hotAppWithStorageProvider = hot(AppWithStorageProvider);

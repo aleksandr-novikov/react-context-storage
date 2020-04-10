@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { hotAppWithStorageProvider } from './app';
+import { AppWithStorageProvider } from './app';
 
 const node = document.getElementById('app');
 
 ReactDom.render(
-  React.createElement(hotAppWithStorageProvider, {}),
+  React.createElement(AppWithStorageProvider, {}),
   node as Element
 );

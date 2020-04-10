@@ -1,3 +1,3 @@
-import { withStorageProvider, withStorage } from './storage';
+import { withStorage, withStorageProvider } from './storage';
 
-export { withStorageProvider, withStorage };
+export { withStorage, withStorageProvider };

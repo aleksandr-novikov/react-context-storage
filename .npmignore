@@ -7,3 +7,4 @@ index.html
 jest.config.js
 webpack.config.js
 tsconfig.js
+dist/sample-app
