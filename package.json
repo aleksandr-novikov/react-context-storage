@@ -1,6 +1,6 @@
 {
   "name": "react-context-storage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "HOCs for React Context Storage",
   "main": "dist/build.js",
   "module": "dist/build.js",
@@ -59,7 +59,8 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "rollup-plugin-babel": "^4.4.0"
   },
   "peerDependencies": {
     "react": "^16.13.1"
@@ -74,8 +75,12 @@
   },
   "homepage": "https://github.com/aleksandr-novikov/react-context-storage#readme",
   "license": "MIT",
-  "dependencies": {
-    "rollup-plugin-babel": "^4.4.0"
-  },
-  "keywords": ["react", "storage", "store", "context", "state", "redux"]
+  "keywords": [
+    "react",
+    "storage",
+    "store",
+    "context",
+    "state",
+    "redux"
+  ]
 }
