@@ -1,6 +1,6 @@
 # react-context-storage
 
-This is a very lightweight(~8kb) alternative to Redux store based on React Context API. Support multiple storages, reducers, saving to LocalStorage and SessionStorage.
+This is a very lightweight(~5kb) alternative to Redux store based on React Context API. Support multiple storages, reducers, saving to LocalStorage and SessionStorage.
 
 
 ## Installation

@@ -1,6 +1,6 @@
 {
   "name": "react-context-storage",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "HOCs for React Context Storage",
   "main": "dist/build.js",
   "module": "dist/build.js",
@@ -52,6 +52,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.3.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-typescript2": "^0.27.0",
     "style-loader": "^1.0.0",
     "ts-loader": "^6.2.2",
@@ -59,8 +61,7 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.10.3",
-    "rollup-plugin-babel": "^4.4.0"
+    "webpack-dev-server": "^3.10.3"
   },
   "peerDependencies": {
     "react": "^16.13.1"
