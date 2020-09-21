@@ -56,7 +56,7 @@ const useSession = true;
 const useLocal = false;
 
 /* 
-Consumer component that will has a "context" prop which contains:
+Consumer component that will have a "context" prop which contains:
   storage - storage object
   dispatch - function that dispatches an action which gets passed into reducer
 */
