@@ -18,13 +18,13 @@ React v^16.9.0
 withStorageProvider(
 {
   storageName: string, // Name of your storage
-  defaultValues: object, // Default state values of your storage
+  defaultValues: object, // Default state of your storage
   reducer: (state: object, action: { type: string, value: any }) => object, // Reducer that takes in storage state, modifies it based on action type and returns a new state
-  useSession: boolean, // Save storage to SessionStorage and use it next time by storageName
-  useLocal: boolean, // Save storage to LocalStorage and use it next time by storageName
+  useSession: boolean, // Save storage to SessionStorage and retrieve it next time by storageName
+  useLocal: boolean, // Save storage to LocalStorage and retrieve it next time by storageName
 }
 )(
-  Provider: React.ComponentType // This component will provide Storage to child components
+  Provider: React.ComponentType // This component will provide Storage access to the child components
 )
 ```
 
@@ -32,7 +32,7 @@ withStorageProvider(
 
 ```typescript
 withStorage(
-  storageName: string // Name of your storage
+  storageName: string
 )(
   Consumer: React.ComponentType // Storage will be passed to this component via "context" prop
 )
@@ -83,7 +83,7 @@ Wraps Consumer component with Storage.
 const ConsumerWithStorage = withStorage(storageName)(Consumer);
 
 /*
-Parent component that will be wrapped with Storage Provider.
+Should be wrapped with Storage Provider.
 */
 const App = () => (
   <>

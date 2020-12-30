@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { getStorage, createStorage } from './storages';
 import { retrieve, save } from '../utils/browser-storage';
 import { Action, StorageSettings } from './types';
@@ -36,13 +36,17 @@ export const withStorageProvider = ({
     return defaultState;
   };
 
-  const [storage, dispatch] = useReducer(reducer, getDefaultStorageValues());
+  const [storage, dispatch] = useReducer(reducer, defaultState, () =>
+    getDefaultStorageValues()
+  );
 
-  if (useSession) {
-    save(storageName, storage, true);
-  } else if (useLocal) {
-    save(storageName, storage, false);
-  }
+  useEffect(() => {
+    if (useSession) {
+      save(storageName, storage, true);
+    } else if (useLocal) {
+      save(storageName, storage, false);
+    }
+  }, [storageName, storage, useSession, useLocal]);
 
   const ContextStorage = getStorage(storageName) || createStorage(storageName);
 
